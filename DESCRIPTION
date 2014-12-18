@@ -1,0 +1,11 @@
+Package: RGROUNDWATER
+Type: Package
+Title: Functions useful for groundwater research
+Version: 0.1.0
+Date: 2014-12-18
+Author: Bart Rogiers <brogiers@sckcen.be>
+Maintainer: Bart Rogiers <brogiers@sckcen.be>
+Description: The RGROUNDWATER package provides a set of functions useful for
+    performing groundwater research.
+License: GPL (>= 2)
+URL: https://github.com/rogiersbart/RGROUNDWATER
