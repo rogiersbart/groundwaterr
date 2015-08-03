@@ -1,6 +1,0 @@
-fahrenheit_to_kelvin <- function(value) return((value+459.67)*5/9)
-fahrenheit_to_celcius <- function(value) return((value-32)*5/9)
-celsius_to_fahrenheit <- function(value) return(value*9/5+32)
-kelvin_to_fahrenheit <- function(value) return(value*9/5-459.67)
-darcy_to_square_metre <- function(value) return(value*9.869233e-13)
-square_metre_to_darcy <- function(value) return(value/9.869233e-13)

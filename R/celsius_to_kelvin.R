@@ -5,6 +5,6 @@
 #' @param value Temperature (in degree Celsius) value to convert to degree Kelvin
 #' 
 #' @return Temperature value in degree Kelvin
-#' @seealso \code{\link{kelvin_to_celsius}}
+#' @seealso \code{\link{celsius_to_fahrenheit}}, \code{\link{kelvin_to_celsius}}, \code{\link{kelvin_to_fahrenheit}}, \code{\link{fahrenheit_to_celsius}}, \code{\link{fahrenheit_to_kelvin}}
 #' @export
 celcius_to_kelvin <- function(value) return(value+273.15)
