@@ -1,11 +1,14 @@
-Package: groundwateR
+Package: groundwaterr
 Type: Package
 Title: Functions useful for groundwater research
 Version: 0.1.0.9999
 Date: 2014-12-18
 Author: Bart Rogiers <brogiers@sckcen.be>
 Maintainer: Bart Rogiers <brogiers@sckcen.be>
-Description: The groundwateR package provides a set of functions useful for
-    performing groundwater research. The package was previously called RGROUNDWATER.
+Description: The groundwaterr package provides a set of functions useful for
+    performing groundwater research.
 License: GPL (>= 2)
-URL: https://github.com/rogiersbart/groundwateR
+URL: https://github.com/rogiersbart/groundwaterr
+RoxygenNote: 5.0.1
+Suggests:
+  shiny
