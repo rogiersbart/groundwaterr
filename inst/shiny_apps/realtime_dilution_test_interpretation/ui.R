@@ -30,8 +30,10 @@ shinyUI(fluidPage(
         column(3,selectInput('initial_ec_unit', 'unit', choices = list('uS/cm'))),
         column(6,numericInput('qapp', 'apparent q', value = 2)),
         column(6,selectInput('qapp_unit', 'unit', choices = list('cm/h'))),
-        sliderInput('xlim','x axis limits',min=0,max=5*60*24, value = c(0, 6*60)),
-        sliderInput('ylim','y axis limits',min=0,max=5000, value = c(0, 2500))
+        column(3, numericInput("x_min", "x min", value = 0)),
+        column(3, numericInput("x_max", "x max", value = 6*60)),
+        column(3, numericInput("y_min", "y min", value = 0)),
+        column(3, numericInput("y_max", "y max", value = 2500))
       ),
     
     # main panel
