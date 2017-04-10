@@ -1,13 +1,16 @@
 library(shiny)
 library(ggplot2)
+# library(readr)
 vs <- c(0.01E-3,0.1E-3,1E-3,1E-2,1E-1,1)/60
 vs_labs <- c('0.01 mm/h','0.1 mm/h','1 mm/h','1 cm/h','1 dm/h','1 m/h')
 
 shinyServer(function(input, output) {
   output$dilution_plot <- renderPlot({
     if(!is.null(input$dat$datapath)) {
-      dat <- read.csv(input$dat$datapath,skip=15) # TODO: update with readr::read_csv!
+      dat <- try(read.csv(input$dat$datapath,skip=15), silent = TRUE) # TODO: update with readr::read_csv!
+      if(is.null(ncol(dat))) dat <- read.csv2(input$dat$datapath,skip=15) # TODO: update with readr::read_csv!
       date_format <- ifelse(is.na(as.numeric(substr(dat$Date[1],1,4))),"%d-%m-%Y %H:%M:%S","%Y-%m-%d %H:%M:%S")
+      if(substr(dat$Date[1],5,5) == "/") date_format <- "%Y/%m/%d %H:%M:%S"
       dat$time <- as.POSIXct(paste(dat$Date,dat$Time), format = date_format)
       dat <- data.frame(x=as.numeric(difftime(dat$time,dat$time[1],units='mins')),y=as.numeric(dat$CONDUCTIVITY))
     }
